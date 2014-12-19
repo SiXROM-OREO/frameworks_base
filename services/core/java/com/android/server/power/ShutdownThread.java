@@ -48,6 +48,7 @@ import android.os.storage.IStorageShutdownObserver;
 import android.os.storage.IStorageManager;
 import android.system.ErrnoException;
 import android.system.Os;
+import android.provider.Settings;
 
 import com.android.internal.telephony.ITelephony;
 import com.android.server.pm.PackageManagerService;
@@ -149,6 +150,25 @@ public final class ShutdownThread extends Thread {
             if (sIsStarted) {
                 Log.d(TAG, "Request to shutdown already running, returning.");
                 return;
+            }
+        }
+
+        boolean showRebootOption = false;
+
+        String[] actionsArray;
+        String actions = Settings.Global.getStringForUser(context.getContentResolver(),
+                Settings.Global.POWER_MENU_ACTIONS, UserHandle.USER_CURRENT);
+        if (actions == null) {
+            actionsArray = context.getResources().getStringArray(
+                    com.android.internal.R.array.config_globalActionsList);
+        } else {
+            actionsArray = actions.split("\\|");
+        }
+
+        for (int i = 0; i < actionsArray.length; i++) {
+            if (actionsArray[i].equals("reboot")) {
+                showRebootOption = true;
+                break;
             }
         }
 
@@ -368,12 +388,12 @@ public final class ShutdownThread extends Thread {
             }
         } else if (mReason != null && mReason.equals(PowerManager.REBOOT_RECOVERY)) {
             // Factory reset path. Set the dialog message accordingly.
-            pd.setTitle(context.getText(com.android.internal.R.string.reboot_to_recovery_title));
+            pd.setTitle(context.getText(com.android.internal.R.string.reboot_title));
             pd.setMessage(context.getText(
-                        com.android.internal.R.string.reboot_recovery_progress));
+                        com.android.internal.R.string.reboot_progress));
             pd.setIndeterminate(true);
         } else if (mReboot) {
-            pd.setTitle(context.getText(com.android.internal.R.string.reboot_system));
+            pd.setTitle(context.getText(com.android.internal.R.string.reboot_title));
             pd.setMessage(context.getText(com.android.internal.R.string.reboot_progress));
             pd.setIndeterminate(true);
         } else {
