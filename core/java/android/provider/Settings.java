@@ -4170,6 +4170,13 @@ public final class Settings {
         public static final String QS_SHOW_BRIGHTNESS_ICON = "qs_show_brightness_icon";
 
         /**
+         * Boolean value whether to link ringtone and notification volume
+         *
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4355,6 +4362,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(PROXIMITY_AUTO_SPEAKER);
             PRIVATE_SETTINGS.add(PROXIMITY_AUTO_SPEAKER_DELAY);
             PRIVATE_SETTINGS.add(PROXIMITY_AUTO_SPEAKER_INCALL_ONLY);
+            PRIVATE_SETTINGS.add(VOLUME_LINK_NOTIFICATION);
         }
 
         /**
