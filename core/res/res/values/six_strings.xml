@@ -53,6 +53,7 @@
     <string name="reboot_progress">Rebooting\u2026</string>
     <!-- label for item that screenshots in phone options dialog -->
     <string name="global_action_screenshot">Screenshot</string>
+    <string name="global_action_torch">Flashlight</string>
 
     <!-- ADB over network notification -->
     <string name="adb_net_active_notification_title">ADB over network enabled</string>
