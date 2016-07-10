@@ -133,4 +133,7 @@
    <!-- IME selector -->
   <java-symbol type="bool" name="config_show_cmIMESwitcher"/>
 
+  <!-- Whether device has dash charging support -->
+  <java-symbol type="bool" name="config_hasDashCharger" />
+
 </resources>
