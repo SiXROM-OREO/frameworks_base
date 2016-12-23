@@ -73,6 +73,7 @@ import com.android.systemui.recents.events.activity.ShowEmptyViewEvent;
 import com.android.systemui.recents.events.activity.ShowStackActionButtonEvent;
 import com.android.systemui.recents.events.activity.ToggleRecentsEvent;
 import com.android.systemui.recents.events.component.ExpandPipEvent;
+import com.android.systemui.recents.events.activity.ToggleRecentsEvent;
 import com.android.systemui.recents.events.ui.AllTaskViewsDismissedEvent;
 import com.android.systemui.recents.events.ui.DismissAllTaskViewsEvent;
 import com.android.systemui.recents.events.ui.DraggingInRecentsEndedEvent;
@@ -382,6 +383,7 @@ public class RecentsView extends FrameLayout {
                 .setInterpolator(Interpolators.ALPHA_OUT)
                 .withLayer()
                 .start();
+        setOnClickListener(null);
     }
 
     @Override
