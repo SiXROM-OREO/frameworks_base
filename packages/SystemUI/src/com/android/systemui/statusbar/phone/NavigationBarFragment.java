@@ -403,6 +403,8 @@ public class NavigationBarFragment extends Fragment implements Callbacks {
         accessibilityButton.setOnClickListener(this::onAccessibilityClick);
         accessibilityButton.setOnLongClickListener(this::onAccessibilityLongClick);
         updateAccessibilityServicesState(mAccessibilityManager);
+
+        setDoubleTapToSleep();
     }
 
     private boolean onHomeTouch(View v, MotionEvent event) {
