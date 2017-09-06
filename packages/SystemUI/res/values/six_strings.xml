@@ -60,4 +60,8 @@
     <string name="lockscreen_tuner_activity">Lockscreen Shortcuts</string>
     <string name="powernotif_tuner_activity">Power Notifications</string>
 
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
 </resources>
