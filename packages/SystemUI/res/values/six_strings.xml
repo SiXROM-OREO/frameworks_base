@@ -53,4 +53,11 @@
     <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
     <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+
+    <!-- SysUI Tuner -->
+    <string name="statusbar_icons_blacklist">Status Bar Icons</string>
+    <string name="navbar_tuner_activity">Navigation Bar Icons</string>
+    <string name="lockscreen_tuner_activity">Lockscreen Shortcuts</string>
+    <string name="powernotif_tuner_activity">Power Notifications</string>
+
 </resources>
