@@ -26,4 +26,7 @@
     <!-- kill app long press back -->
     <integer name="config_backKillTimeout">800</integer>
 
+    <!-- Setting to false will disable CM's IME switcher implementation for tablets -->
+    <bool name="config_show_cmIMESwitcher">false</bool>
+
 </resources>
