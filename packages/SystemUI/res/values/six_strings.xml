@@ -108,4 +108,7 @@
     <string name="quick_settings_navbar_title">NavBar</string>
     <string name="quick_settings_navbar">NavBar Enabled</string>
     <string name="quick_settings_navbar_off">NavBar Disabled</string>
+
+    <string name="lockscreen_default">Default</string>
+    <string name="lockscreen_hidden">None</string>
 </resources>
