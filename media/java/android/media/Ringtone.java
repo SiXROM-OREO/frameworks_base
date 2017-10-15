@@ -274,6 +274,10 @@ public class Ringtone {
         return title;
     }
 
+    /**
+     * Set custom audio attributes
+     * @hide
+     */
     public void setCustomAudioAttributes() {
         int focusmode = getRingtoneFocusMode();
         boolean isHeadsetConnected = false;
